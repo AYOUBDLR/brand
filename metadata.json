@@ -1,0 +1,6 @@
+{
+  "name": "Spider-Man: Brand New Day Portal",
+  "description": "Exclusive Spider-Man: Brand New Day movie stream and offline mirror portal with high-speed download node syncing, interactive trailer preview, and real-time status indicators.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
