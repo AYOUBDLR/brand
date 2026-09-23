@@ -1,7 +1,7 @@
 import React from 'react';
 import { Check, Play, FileVideo } from 'lucide-react';
-const AVATAR_IMAGE_URL = 'https://i.postimg.cc/MGSX3ZVh/images.jpg';
-const PREVIEW_IMAGE_URL = 'https://i.postimg.cc/MGqKbP8p/images.jpg';
+import southParkAvatar from '../assets/images/southpark_avatar_1790121336681.jpg';
+import southParkBanner from '../assets/images/southpark_banner_1790121348320.jpg';
 
 interface HeroPortalCardProps {
   onPlayPreview: () => void;
@@ -15,13 +15,13 @@ export const HeroPortalCard: React.FC<HeroPortalCardProps> = ({ onPlayPreview })
         <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full p-1 bg-gradient-to-tr from-[#ff007f] to-[#ff4500] avatar-glow">
           <div className="w-full h-full rounded-full overflow-hidden border-2 border-[#ff007f] bg-slate-900">
             <img
-              src={AVATAR_IMAGE_URL}
-              alt="Spider-Man Brand New Day Logo"
+              src={southParkAvatar}
+              alt="South Park"
               className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
               referrerPolicy="no-referrer"
               onError={(e) => {
                 (e.target as HTMLImageElement).src =
-                  'https://images.unsplash.com/photo-1635863138275-d9b33299680b?q=80&w=400&auto=format&fit=crop';
+                  'https://upload.wikimedia.org/wikipedia/en/thumb/f/f6/South_Park_characters.png/300px-South_Park_characters.png';
               }}
             />
           </div>
@@ -35,7 +35,7 @@ export const HeroPortalCard: React.FC<HeroPortalCardProps> = ({ onPlayPreview })
 
       {/* Main Movie Title */}
       <h1 className="font-cinzel text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight uppercase max-w-md mx-auto mb-4 drop-shadow-md">
-        Spider-Man: Brand New Day
+        SOUTH PARK
       </h1>
 
       {/* Fast Offline Mirror Status Pill */}
@@ -52,13 +52,13 @@ export const HeroPortalCard: React.FC<HeroPortalCardProps> = ({ onPlayPreview })
         {/* Poster Media Background */}
         <div className="relative aspect-video w-full overflow-hidden bg-slate-950">
           <img
-            src={PREVIEW_IMAGE_URL}
-            alt="Movie Preview"
-            className="w-full h-full object-cover opacity-80 group-hover:opacity-95 group-hover:scale-105 transition-all duration-700"
+            src={southParkBanner}
+            alt="South Park Preview"
+            className="w-full h-full object-cover opacity-85 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
             referrerPolicy="no-referrer"
             onError={(e) => {
               (e.target as HTMLImageElement).src =
-                'https://images.unsplash.com/photo-1635863138275-d9b33299680b?q=80&w=800&auto=format&fit=crop';
+                'https://upload.wikimedia.org/wikipedia/en/thumb/f/f6/South_Park_characters.png/600px-South_Park_characters.png';
             }}
           />
 
@@ -70,7 +70,7 @@ export const HeroPortalCard: React.FC<HeroPortalCardProps> = ({ onPlayPreview })
             <button
               type="button"
               className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#ff007f] hover:bg-[#ff1a8c] text-white flex items-center justify-center shadow-[0_0_30px_rgba(255,0,127,0.8)] group-hover:scale-110 transition-all duration-300"
-              aria-label="Play Movie Preview"
+              aria-label="Play Episode Preview"
             >
               <Play className="w-8 h-8 sm:w-9 sm:h-9 fill-white translate-x-0.5" />
             </button>
@@ -80,7 +80,7 @@ export const HeroPortalCard: React.FC<HeroPortalCardProps> = ({ onPlayPreview })
           <div className="absolute bottom-4 left-0 right-0 flex justify-center px-4">
             <div className="bg-white hover:bg-slate-100 text-[#ff007f] px-5 py-2 sm:py-2.5 rounded-full font-extrabold text-xs sm:text-xs tracking-wider uppercase flex items-center gap-2 shadow-xl group-hover:scale-105 transition-transform">
               <FileVideo className="w-4 h-4 fill-[#ff007f]/20 stroke-[#ff007f] stroke-[2.5]" />
-              <span>PLAY MOVIE PREVIEW</span>
+              <span>PLAY EPISODE PREVIEW</span>
             </div>
           </div>
         </div>

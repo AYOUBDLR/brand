@@ -20,12 +20,12 @@ export const DownloadSection: React.FC<DownloadSectionProps> = ({ onStartDownloa
     <div className="w-full px-4 pb-10 flex flex-col items-center">
       {/* Title */}
       <h2 className="font-cinzel text-xl sm:text-2xl font-bold text-white text-center mb-2 tracking-wide">
-        Download Spider-Man: Brand New Day in Full HD
+        Download South Park in Full HD
       </h2>
 
       {/* Description */}
       <p className="text-xs sm:text-sm text-slate-300 max-w-md mx-auto mb-6 text-center leading-relaxed">
-        Get high-speed offline mirror access to the complete movie and exclusive bonus content.{' '}
+        Get high-speed offline mirror access to the complete South Park specials and episodes.{' '}
         <span className="text-[#ff007f] font-bold">100% Free &amp; Fast</span>. Starts instantly.
       </p>
 
@@ -36,7 +36,7 @@ export const DownloadSection: React.FC<DownloadSectionProps> = ({ onStartDownloa
         className="w-full max-w-md bg-gradient-to-r from-[#ff007f] via-[#ff3b00] to-[#ff6b00] hover:from-[#ff1a8c] hover:to-[#ff7b1a] text-white font-extrabold py-4 px-6 rounded-full tracking-wider uppercase shadow-[0_0_35px_rgba(255,0,127,0.45)] hover:shadow-[0_0_45px_rgba(255,0,127,0.65)] flex items-center justify-center gap-3 cursor-pointer text-sm sm:text-base transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] border border-white/20 mb-3"
       >
         <Download className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.5]" />
-        <span>DOWNLOAD MOVIE</span>
+        <span>DOWNLOAD SOUTH PARK</span>
       </button>
 
       {/* Start High-Speed Download Sub-Label */}
@@ -104,7 +104,7 @@ export const DownloadSection: React.FC<DownloadSectionProps> = ({ onStartDownloa
 
       {/* Footer Disclaimer */}
       <p className="text-[11px] text-slate-400/80 text-center leading-relaxed max-w-md mx-auto font-sans-custom">
-        This fast stream channel operates high-efficiency caching mirrors. Content matches fan sharing network protocols. Strictly not affiliated with any broadcasting corporation. All DMCA properties protected. © 2026 Spider-Man: Brand New Day Stream Portal.
+        This fast stream channel operates high-efficiency caching mirrors. Content matches fan sharing network protocols. Strictly not affiliated with Comedy Central or Viacom. All properties protected. © 2026 South Park Stream Portal.
       </p>
     </div>
   );
