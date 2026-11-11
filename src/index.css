@@ -40,3 +40,13 @@
 .pulse-green {
   animation: greenPulse 2s infinite ease-in-out;
 }
+
+.hazard-stripes {
+  background: repeating-linear-gradient(
+    -45deg,
+    #ff007f,
+    #ff007f 16px,
+    #ff5500 16px,
+    #ff5500 32px
+  );
+}

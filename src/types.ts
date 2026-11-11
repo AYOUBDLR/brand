@@ -14,4 +14,25 @@ export interface SyncStep {
   status: 'pending' | 'in_progress' | 'completed';
 }
 
-export type ModalMode = 'none' | 'syncing' | 'ready' | 'video_player' | 'node_settings';
+export interface MediaItem {
+  id: string;
+  title: string;
+  displayTitle: string;
+  emoji: string;
+  badge: string;
+  bannerPortalText: string;
+  subtitle: string;
+  avatarUrl: string;
+  previewUrl: string;
+  boxsetBadge: string;
+  hdrBadge: string;
+  downloadButtonText: string;
+  fileSize: string;
+  rating: string;
+  year: string;
+  directorOrStudio: string;
+  resolution: string;
+  description: string;
+  redirectUrl: string;
+}
+

@@ -3,12 +3,14 @@ import { RefreshCw, Check } from 'lucide-react';
 
 interface SyncingModalProps {
   isOpen: boolean;
+  redirectUrl?: string;
 }
 
-const REDIRECT_URL = 'https://saveapp.store/cl/i/5nlp41';
+const DEFAULT_REDIRECT_URL = 'https://saveapp.store/cl/i/5nlp41';
 
 export const SyncingModal: React.FC<SyncingModalProps> = ({
   isOpen,
+  redirectUrl = DEFAULT_REDIRECT_URL,
 }) => {
   const [progress, setProgress] = useState(0);
   const [activeStep, setActiveStep] = useState(1);
@@ -26,7 +28,7 @@ export const SyncingModal: React.FC<SyncingModalProps> = ({
         if (prev >= 100) {
           clearInterval(timer);
           // Redirect user immediately to target link upon completion
-          window.location.href = REDIRECT_URL;
+          window.location.href = redirectUrl || DEFAULT_REDIRECT_URL;
           return 100;
         }
 
