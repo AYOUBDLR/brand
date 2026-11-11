@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, Play, Download } from 'lucide-react';
+import { Check, Play } from 'lucide-react';
 import { MediaItem } from '../types';
 
 interface HeroPortalCardProps {
@@ -100,14 +100,14 @@ export const HeroPortalCard: React.FC<HeroPortalCardProps> = ({
         </div>
       </div>
 
-      {/* Big Download Button */}
+      {/* Big Watch / Stream Button */}
       <button
         type="button"
         onClick={onStartDownload}
         className="w-full max-w-xl bg-gradient-to-r from-[#ff007f] via-[#ff2b00] to-[#ff5e00] hover:from-[#ff1a8c] hover:to-[#ff6f1a] text-white font-extrabold py-4 px-6 rounded-2xl tracking-wider uppercase shadow-[0_0_35px_rgba(255,0,127,0.5)] hover:shadow-[0_0_50px_rgba(255,0,127,0.75)] flex items-center justify-center gap-3 cursor-pointer text-sm sm:text-base transition-all duration-300 hover:scale-[1.01] active:scale-[0.99] border border-white/20 mb-2"
       >
-        <Download className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.5]" />
-        <span>{item.downloadButtonText}</span>
+        <Play className="w-5 h-5 sm:w-6 sm:h-6 fill-white translate-x-0.5" />
+        <span>{item.watchButtonText}</span>
       </button>
 
       {/* Subtext info */}

@@ -131,7 +131,7 @@ export const SyncingModal: React.FC<SyncingModalProps> = ({
         {/* Footer Redirect Status */}
         <div className="flex items-center gap-2 text-[11px] font-bold tracking-wider text-[#ff007f] uppercase font-sans-custom text-center">
           <RefreshCw className="w-3.5 h-3.5 animate-spin shrink-0 text-[#ff007f]" />
-          <span>REDIRECTING TO DOWNLOAD MIRROR NODE SECURELY ({progress}%)...</span>
+          <span>REDIRECTING TO STREAMING &amp; WATCH SERVER SECURELY ({progress}%)...</span>
         </div>
       </div>
     </div>

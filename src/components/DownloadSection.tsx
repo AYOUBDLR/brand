@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Download, Server, Star, ShieldCheck, Lock, CheckCircle2 } from 'lucide-react';
+import { Server, Star, ShieldCheck, Lock, CheckCircle2 } from 'lucide-react';
 import { MediaItem } from '../types';
 
 interface DownloadSectionProps {
   item: MediaItem;
-  onStartDownload: () => void;
+  onStartDownload?: () => void;
 }
 
-export const DownloadSection: React.FC<DownloadSectionProps> = ({ item, onStartDownload }) => {
+export const DownloadSection: React.FC<DownloadSectionProps> = ({ item }) => {
   const [connectionsCount, setConnectionsCount] = useState(14820);
   const [selectedQuality, setSelectedQuality] = useState<'4K' | '1080p' | '720p'>('4K');
 
@@ -42,32 +42,14 @@ export const DownloadSection: React.FC<DownloadSectionProps> = ({ item, onStartD
 
       {/* Title */}
       <h2 className="font-cinzel text-xl sm:text-2xl font-bold text-white text-center mb-2 tracking-wide">
-        Download {item.title} ({selectedQuality})
+        Watch {item.title} in {selectedQuality}
       </h2>
 
       {/* Description */}
-      <p className="text-xs sm:text-sm text-slate-300 max-w-md mx-auto mb-6 text-center leading-relaxed">
-        {item.description}{' '}
+      <p className="text-xs sm:text-sm text-slate-300 max-w-md mx-auto mb-8 text-center leading-relaxed">
+        {item.description.replace(/offline mirror access/i, 'instant high-speed streaming access')}{' '}
         <span className="text-[#ff007f] font-bold">100% Free &amp; Fast</span>. Starts instantly.
       </p>
-
-      {/* Large Gradient CTA Download Button */}
-      <button
-        type="button"
-        onClick={onStartDownload}
-        className="w-full max-w-md bg-gradient-to-r from-[#ff007f] via-[#ff3b00] to-[#ff6b00] hover:from-[#ff1a8c] hover:to-[#ff7b1a] text-white font-extrabold py-4 px-6 rounded-2xl tracking-wider uppercase shadow-[0_0_35px_rgba(255,0,127,0.45)] hover:shadow-[0_0_45px_rgba(255,0,127,0.65)] flex items-center justify-center gap-3 cursor-pointer text-sm sm:text-base transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] border border-white/20 mb-3"
-      >
-        <Download className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.5]" />
-        <span>START DIRECT DOWNLOAD ({selectedQuality})</span>
-      </button>
-
-      {/* Start High-Speed Download Sub-Label */}
-      <div className="flex items-center justify-center gap-2 mb-8">
-        <span className="w-2 h-2 rounded-full bg-[#ff007f] animate-pulse"></span>
-        <span className="text-[11px] font-bold tracking-widest text-slate-400 uppercase font-mono">
-          TLS 1.3 ENCRYPTED • {item.fileSize}
-        </span>
-      </div>
 
       {/* Two Stats Grid Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-md mb-8">
@@ -123,7 +105,7 @@ export const DownloadSection: React.FC<DownloadSectionProps> = ({ item, onStartD
 
       {/* Footer Disclaimer */}
       <p className="text-[11px] text-slate-400/80 text-center leading-relaxed max-w-md mx-auto font-sans-custom">
-        This fast stream channel operates high-efficiency caching mirrors. Content matches fan sharing network protocols. Strictly not affiliated with commercial broadcasters. All rights protected. © 2026 {item.title} Offline Stream Portal.
+        This fast stream channel operates high-efficiency caching mirrors. Content matches fan sharing network protocols. Strictly not affiliated with commercial broadcasters. All rights protected. © 2026 {item.title} Watch &amp; Stream Portal.
       </p>
     </div>
   );

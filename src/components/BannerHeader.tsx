@@ -6,7 +6,7 @@ interface BannerHeaderProps {
 }
 
 export const BannerHeader: React.FC<BannerHeaderProps> = ({
-  portalText = 'EXCLUSIVE CAMPUS DRIVERS DOWNLOAD PORTAL',
+  portalText = 'EXCLUSIVE CAMPUS DRIVERS WATCH PORTAL',
 }) => {
   return (
     <div className="w-full hazard-stripes text-white py-3 px-4 text-center font-bold text-xs sm:text-sm tracking-wider shadow-lg flex items-center justify-center gap-2 rounded-t-2xl sm:rounded-t-3xl border-b border-orange-500/30 overflow-hidden relative">

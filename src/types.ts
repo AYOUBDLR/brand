@@ -26,7 +26,7 @@ export interface MediaItem {
   previewUrl: string;
   boxsetBadge: string;
   hdrBadge: string;
-  downloadButtonText: string;
+  watchButtonText: string;
   fileSize: string;
   rating: string;
   year: string;
