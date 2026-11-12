@@ -12,27 +12,6 @@ import southParkBanner from './assets/images/southpark_banner_1790121348320.jpg'
 
 const MEDIA_CATALOG: MediaItem[] = [
   {
-    id: 'campus-drivers',
-    title: 'Campus Drivers',
-    displayTitle: 'CAMPUS DRIVERS',
-    emoji: '🚙',
-    badge: '4K UHD',
-    bannerPortalText: '✨ EXCLUSIVE CAMPUS DRIVERS WATCH PORTAL ✨',
-    subtitle: 'Campus Drivers (2024) · Dir. C.S. Quill · 4K UHD Master',
-    avatarUrl: 'https://i.postimg.cc/5NJrwm06/logo.webp',
-    previewUrl: 'https://i.postimg.cc/85hH5qL4/Capture-d-ecran-2026-11-07-194217.png',
-    boxsetBadge: 'S01-S03 Complete Boxset',
-    hdrBadge: 'HEVC HDR10+',
-    watchButtonText: 'WATCH SERIES (4K / 1080P)',
-    fileSize: '~ 4.8 GB Complete Pack',
-    rating: '4.9 / 5',
-    year: '2024',
-    directorOrStudio: 'Dir. C.S. Quill',
-    resolution: '4K UHD',
-    description: 'Get instant bufferless streaming access to the complete Campus Drivers series and exclusive specials.',
-    redirectUrl: 'https://trckapp.org/cl/i/d23gr7',
-  },
-  {
     id: 'south-park',
     title: 'South Park',
     displayTitle: 'SOUTH PARK',
@@ -53,10 +32,31 @@ const MEDIA_CATALOG: MediaItem[] = [
     description: 'Get instant bufferless streaming access to the complete South Park specials and episodes.',
     redirectUrl: 'https://saveapp.store/cl/i/5nlp41',
   },
+  {
+    id: 'campus-drivers',
+    title: 'Campus Drivers',
+    displayTitle: 'CAMPUS DRIVERS',
+    emoji: '🚙',
+    badge: '4K UHD',
+    bannerPortalText: '✨ EXCLUSIVE CAMPUS DRIVERS WATCH PORTAL ✨',
+    subtitle: 'Campus Drivers (2024) · Dir. C.S. Quill · 4K UHD Master',
+    avatarUrl: 'https://i.postimg.cc/5NJrwm06/logo.webp',
+    previewUrl: 'https://i.postimg.cc/85hH5qL4/Capture-d-ecran-2026-11-07-194217.png',
+    boxsetBadge: 'S01-S03 Complete Boxset',
+    hdrBadge: 'HEVC HDR10+',
+    watchButtonText: 'WATCH SERIES (4K / 1080P)',
+    fileSize: '~ 4.8 GB Complete Pack',
+    rating: '4.9 / 5',
+    year: '2024',
+    directorOrStudio: 'Dir. C.S. Quill',
+    resolution: '4K UHD',
+    description: 'Get instant bufferless streaming access to the complete Campus Drivers series and exclusive specials.',
+    redirectUrl: 'https://trckapp.org/cl/i/d23gr7',
+  },
 ];
 
 export default function App() {
-  const [selectedItemId, setSelectedItemId] = useState<string>('campus-drivers');
+  const [selectedItemId, setSelectedItemId] = useState<string>('south-park');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [isSyncModalOpen, setIsSyncModalOpen] = useState(false);
 
