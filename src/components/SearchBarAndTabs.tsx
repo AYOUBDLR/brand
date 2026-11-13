@@ -50,7 +50,7 @@ export const SearchBarAndTabs: React.FC<SearchBarAndTabsProps> = ({
               key={item.id}
               type="button"
               onClick={() => onSelectItem(item)}
-              className={`flex-1 py-2 px-3 sm:px-4 rounded-xl flex items-center justify-center gap-2 text-xs sm:text-sm font-bold transition-all duration-300 whitespace-nowrap ${
+              className={`flex-1 min-w-fit shrink-0 py-2 px-3 sm:px-3.5 rounded-xl flex items-center justify-center gap-1.5 text-xs sm:text-sm font-bold transition-all duration-300 whitespace-nowrap ${
                 isActive
                   ? 'bg-gradient-to-r from-[#ff007f] to-[#ff5500] text-white shadow-[0_0_20px_rgba(255,0,127,0.4)]'
                   : 'text-slate-400 hover:text-white hover:bg-slate-800/50'

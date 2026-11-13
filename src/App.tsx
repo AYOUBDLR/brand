@@ -5,12 +5,31 @@ import { DownloadSection } from './components/DownloadSection';
 import { SyncingModal } from './components/SyncingModal';
 import { SearchBarAndTabs } from './components/SearchBarAndTabs';
 import { MediaItem } from './types';
-import campusDriversAvatar from './assets/images/campus_drivers_avatar_1794416690899.jpg';
-import campusDriversCarPreview from './assets/images/campus_drivers_car_preview_1794416705280.jpg';
 import southParkAvatar from './assets/images/southpark_avatar_1790121336681.jpg';
 import southParkBanner from './assets/images/southpark_banner_1790121348320.jpg';
 
 const MEDIA_CATALOG: MediaItem[] = [
+  {
+    id: 'love-island-aus-s8',
+    title: 'Love Island AUS S8',
+    displayTitle: 'LOVE ISLAND AUSTRALIA',
+    emoji: '🏝️',
+    badge: '4K UHD',
+    bannerPortalText: '✨ EXCLUSIVE LOVE ISLAND AUSTRALIA S8 WATCH PORTAL ✨',
+    subtitle: 'Love Island Australia Season 8 (2026) · 9Now / ITV Studios · 4K UHD Master',
+    avatarUrl: 'https://i.postimg.cc/FHH0xfMf/images.jpg',
+    previewUrl: 'https://i.postimg.cc/1558kkJJ/images.jpg',
+    boxsetBadge: 'Season 8 Full Episodes',
+    hdrBadge: '1080P / 4K HDR',
+    watchButtonText: 'WATCH SEASON 8 (4K / 1080P)',
+    fileSize: '~ 8.6 GB Season Pack',
+    rating: '4.9 / 5',
+    year: '2026',
+    directorOrStudio: '9Now / ITV Studios',
+    resolution: '4K UHD',
+    description: 'Get instant bufferless streaming access to Love Island Australia Season 8 episodes and villa specials.',
+    redirectUrl: 'https://apptrck.net/cl/i/7jwlrg',
+  },
   {
     id: 'south-park',
     title: 'South Park',
@@ -56,16 +75,18 @@ const MEDIA_CATALOG: MediaItem[] = [
 ];
 
 export default function App() {
-  const [selectedItemId, setSelectedItemId] = useState<string>('south-park');
+  const [selectedItemId, setSelectedItemId] = useState<string>('love-island-aus-s8');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [isSyncModalOpen, setIsSyncModalOpen] = useState(false);
 
   // Filter media based on search query or fallback to selected
   const activeItem = useMemo(() => {
     if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase();
       const match = MEDIA_CATALOG.find((m) =>
-        m.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        m.displayTitle.toLowerCase().includes(searchQuery.toLowerCase())
+        m.title.toLowerCase().includes(q) ||
+        m.displayTitle.toLowerCase().includes(q) ||
+        m.subtitle.toLowerCase().includes(q)
       );
       if (match) return match;
     }
